@@ -1,0 +1,3 @@
+nome: "AGUA", preco: 2.00
+nome: "AGUA COM GÁS", preco: 3.00
+nome: "BOLO", preco: 4.00
