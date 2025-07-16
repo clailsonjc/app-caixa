@@ -98,7 +98,7 @@ function continuarApp() {
   function imprimirRecibo() {
     let recibo = "**************************\n";
     let total = 0;
-    recibo += "***POC LANCHES-RECIBO***\n\n";
+    recibo += "*** POC LANCHES-RECIBO ***\n\n";
     Object.keys(carrinho).forEach((nome) => {
       const item = carrinho[nome];
       const subtotal = item.quantidade * item.preco;
