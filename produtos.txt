@@ -6,3 +6,4 @@ nome: "PRATINHO", preco: 10.00
 nome: "COCADA", preco: 3.50
 nome: "MARUJINHO", preco: 1.00
 nome: "CACHORRO-QUENTE", preco: 5.00
+nome: "PÃO COM QUEIJO", preco: 3.00
