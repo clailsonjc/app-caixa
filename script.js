@@ -96,7 +96,7 @@ function continuarApp() {
   //************impressão************ */
 
   function imprimirRecibo() {
-    let recibo = "**********************************\n";
+    let recibo = "**************************\n";
     let total = 0;
     recibo += "***POC LANCHES-RECIBO***\n\n";
     Object.keys(carrinho).forEach((nome) => {
@@ -106,11 +106,11 @@ function continuarApp() {
       recibo += `${item.quantidade}x ${nome}\nR$ ${item.preco.toFixed(
         2
       )} = R$ ${subtotal.toFixed(2)}\n\n`;
-      recibo += "----------------------------------\n\n";
+      recibo += "--------------------------\n\n";
     });
 
     recibo += `TOTAL: R$ ${total.toFixed(2)}\n`;
-    recibo += "**********************************\n";
+    recibo += "**************************\n";
     recibo += "Obrigado pela preferência!";
 
     // Abrir nova janela para impressão
