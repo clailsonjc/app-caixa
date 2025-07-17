@@ -113,7 +113,7 @@ function continuarApp() {
     recibo += "**************************\n";
     recibo += "Obrigado pela preferência!";
 
-    /*
+    
     // Abrir nova janela para impressão
     const janela = window.open("", "", "width=300,height=400");
     janela.document.write(
@@ -122,14 +122,14 @@ function continuarApp() {
     janela.document.close();
     janela.print();
     janela.close();
-    */
-
+    
+/*
     // Abrir nova janela para impressão em html
     const original = document.body.innerHTML;
     document.body.innerHTML = `<pre style="font-family: monospace; font-size:14px;">${recibo}</pre>`;
     window.print();
     document.body.innerHTML = original; // volta para o app depois de imprimir
-
+*/
 
 
     
