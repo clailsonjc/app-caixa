@@ -94,11 +94,11 @@ function continuarApp() {
     ).textContent = `Total:\nR$ ${total.toFixed(2)}`;
   }
   //************impressão************ */
-
-  function imprimirRecibo() {
-    let recibo = "**************************\n";
+  //função para gerar o recibo
+  function gerarReciboTexto() {
+    let recibo = "**** RECIBO DE VENDA ****\n\n";
     let total = 0;
-    recibo += "*** POC LANCHES-RECIBO ***\n\n";
+
     Object.keys(carrinho).forEach((nome) => {
       const item = carrinho[nome];
       const subtotal = item.quantidade * item.preco;
@@ -106,36 +106,29 @@ function continuarApp() {
       recibo += `${item.quantidade}x ${nome}\nR$ ${item.preco.toFixed(
         2
       )} = R$ ${subtotal.toFixed(2)}\n\n`;
-      recibo += "--------------------------\n\n";
     });
 
+    recibo += "---------------------------\n";
     recibo += `TOTAL: R$ ${total.toFixed(2)}\n`;
-    recibo += "**************************\n";
+    recibo += "***************************\n";
+    recibo += `Data: ${new Date().toLocaleString()}\n`;
     recibo += "Obrigado pela preferência!";
+    return recibo;
+  }
 
-    
-    // Abrir nova janela para impressão
+  //função para imprimir
+  function imprimirRecibo() {
+    const recibo = gerarReciboTexto();
     const janela = window.open("", "", "width=300,height=400");
     janela.document.write(
-      `<pre style="font-family: monospace; font-size:15px;">${recibo}</pre>`
+      `<pre style="font-family: monospace; font-size:14px;">${recibo}</pre>`
     );
     janela.document.close();
     janela.print();
-    janela.close();
-    
-/*
-    // Abrir nova janela para impressão em html
-    const original = document.body.innerHTML;
-    document.body.innerHTML = `<pre style="font-family: monospace; font-size:14px;">${recibo}</pre>`;
-    window.print();
-    document.body.innerHTML = original; // volta para o app depois de imprimir
-*/
-
-
-    
+    //janela.close();
   }
 
-  //***********impressão fim */
+  //***********impressão fim ***********************/
   finalizarBtn.addEventListener("click", () => {
     const total = Object.keys(carrinho).reduce((acc, nome) => {
       return acc + carrinho[nome].quantidade * carrinho[nome].preco;
@@ -169,6 +162,27 @@ function continuarApp() {
       }
     };
 
+    document.getElementById("compartilhar-btn").onclick = async () => {
+      const recibo = gerarReciboTexto();
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: "Recibo de Venda",
+            text: recibo,
+          });
+        } catch (err) {
+          alert("Compartilhamento cancelado ou não suportado.");
+        }
+      } else {
+        // Fallback: copiar para área de transferência
+        navigator.clipboard.writeText(recibo).then(() => {
+          alert("Recibo copiado! Cole no WhatsApp ou onde desejar.");
+        });
+      }
+      location.reload();
+    };
+
     document.getElementById("confirmar-btn").onclick = () => {
       document.getElementById("modal-confirmacao").style.display = "none";
       imprimirRecibo(); // imprime antes de recarregar
@@ -180,4 +194,3 @@ function continuarApp() {
     };
   });
 }
-
