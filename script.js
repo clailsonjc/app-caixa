@@ -112,7 +112,7 @@ function continuarApp() {
 
    
     recibo += `TOTAL: R$ ${total.toFixed(2)}\n`;
-    recibo += "***************************\n";
+    recibo += "*******************************\n";
     recibo += `Data: ${new Date().toLocaleString()}\n`;
     recibo += "Obrigado pela preferência!";
     return recibo;
