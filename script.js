@@ -107,9 +107,10 @@ function continuarApp() {
       recibo += `${item.quantidade}x ${nome}\nR$ ${item.preco.toFixed(
         2
       )} = R$ ${subtotal.toFixed(2)}\n\n`;
+      recibo += "---------------------------\n";
     });
 
-    recibo += "---------------------------\n";
+   
     recibo += `TOTAL: R$ ${total.toFixed(2)}\n`;
     recibo += "***************************\n";
     recibo += `Data: ${new Date().toLocaleString()}\n`;
