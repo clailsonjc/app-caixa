@@ -96,7 +96,8 @@ function continuarApp() {
   //************impressão************ */
   //função para gerar o recibo
   function gerarReciboTexto() {
-    let recibo = "**** RECIBO DE VENDA ****\n\n";
+    let recibo = "*******************************\n";
+    recibo += "***POC LANCHES-RECIBO***\n\n";
     let total = 0;
 
     Object.keys(carrinho).forEach((nome) => {
