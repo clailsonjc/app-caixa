@@ -126,7 +126,7 @@ function continuarApp() {
     );
     janela.document.close();
     janela.print();
-    //janela.close();
+    janela.close();
   }
 
   //***********impressão fim ***********************/
