@@ -1,11 +1,10 @@
 nome: "XILITO", preco: 1.00
 nome: "TORCIDA", preco: 2.50
-nome: "BOLO", preco: 4.00
+nome: "BOLO", preco: 3.00
 nome: "REFRIGERANTE LATA", preco: 5.00
 nome: "REFRIGERANTE PET", preco: 3.50
 nome: "CACHORRO-QUENTE", preco: 4.00
 nome: "CACHORRO-QUENTE + SUCO", preco: 5.00
-nome: "BOLO", preco: 3.00
 nome: "P. POP", preco: 0.50
 nome: "BROWNIE", preco: 4.00
 nome: "DINDIM", preco:3.50
@@ -14,12 +13,16 @@ nome: "KITKAT", preco: 4.00
 nome: "PESCOÇO GIRAFA", preco: 3.00
 nome: "NUCITA", preco: 0.50
 nome: "HALLS", preco: 2.50
-nome: "TRIDENTE", preco: 3.00
 nome: "BATON", preco: 2.00
 nome: "PAÇOCA", preco: 0.70
 nome: "JUJUBA", preco: 1.00
 nome: "BOMBOM YORGUTE 5und", preco: 1.00
 nome: "SALGADINHO", preco: 1.00
+nome: "SONHO VALSA", preco: 2.00
+nome: "PAO DE QUEIJO", preco: 5.00
+nome: "PIPOCA SAL", preco: 1.50
+nome: "MUNGUZÁ", preco: 3.00
+
 
 
 
