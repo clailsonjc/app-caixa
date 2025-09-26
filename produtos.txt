@@ -3,6 +3,7 @@ nome: "TORCIDA", preco: 2.50
 nome: "BOLO", preco: 3.00
 nome: "REFRIGERANTE LATA", preco: 5.00
 nome: "REFRIGERANTE PET", preco: 3.50
+nome: "REFRIGERANTE 600ml", preco: 6.00
 nome: "CACHORRO-QUENTE", preco: 4.00
 nome: "CACHORRO-QUENTE + SUCO", preco: 5.00
 nome: "P. POP", preco: 0.50
@@ -23,6 +24,8 @@ nome: "PAO DE QUEIJO", preco: 5.00
 nome: "PIPOCA SAL", preco: 1.50
 nome: "MUNGUZÁ", preco: 3.00
 nome: "PASTEL", preco: 3.00
+nome: "SALGADO", preco: 4.00
+
 
 
 
